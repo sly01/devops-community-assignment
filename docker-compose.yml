@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web-ui:
+    build: ./web-ui
+  web-static:
+    build: ./web-static
+  proxy:
+    build: ./haproxy
+    ports:
+      - "9090:9090"
+      - "8404:8404"
