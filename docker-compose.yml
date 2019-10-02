@@ -1,11 +1,11 @@
 version: '3'
 services:
   web-ui:
-    build: ./web-ui
+    image: aerkoc/web-ui
   web-static:
-    build: ./web-static
+    image: aerkoc/web-static
   proxy:
-    build: ./haproxy
+    image: aerkoc/haproxy
     ports:
       - "9090:9090"
       - "8404:8404"
